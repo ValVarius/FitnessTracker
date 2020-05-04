@@ -1,1 +1,3 @@
-# FitnessTracker
+# Fitness Tracker
+
+```The interface in this project displays three major sections on the page. The user can enter a new exercise with the form displayed on the left. Once the form is submitted, a new button with the name of the exercise appears at the center of the screen. The user may add several exercises and for each of them a new button with the name of the exercise is produced. If one of these buttons is clicked, the data of the corresponding exercise is displayed on the right side of the screen. At this point, if the user wishes to do so, he can change the fields of the exercise directly on the form where they are displayed and store the new values by clicking on the submit button again.```
