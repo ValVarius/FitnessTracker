@@ -14,19 +14,95 @@
         width: 200px;
         height: 200px;
       }
+      .column {
+        float: left;
+        width: 30%;
+        padding: 10px;
+      }
+      #display{
+        width: 200px;
+        height: 460px;
+      }
+      .button {
+        background-color: #008CBA; 
+        color: white;
+        padding: 14px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border-radius: 8px;
+        width: 100%;
+  
+      }
+
+
+      
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     </style>
+
   </head>
   <body>
-    <form action="/submit" method="post">
+    
     <h1>Hello Champion!</h1>
-    <h2>Enter a Workout!</h2>
-      <input type="text" name="title" placeholder="Title">
-      <textarea type="text" name="body" placeholder="Describe your workout"></textarea>
+    
+    <div class="row">
 
-      <input type="submit">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Enter a Workout!</h2>
+      <input type="text" id="title" placeholder="Title">
+      <textarea class="text" type="text" id="body" placeholder="Describe your workout"></textarea>
+      <input type="text" id="type" placeholder="Type of Exercise">
+      <input type="text" id="weight" placeholder="Amount of Weight">
+      <input type="text" id="sets" placeholder="Number of Sets">
+      <input type="text" id="duration" placeholder="Duration">
+      <input type="submit" id = inputNew>
+    </div>
+    <!-- end column one -->
+     <div class="column" style="background-color:rgb(231, 231, 206);">
+      <h2>Your Workout!</h2>
+      <div id="display">
+
+      </div>
+      
+      
+    </div>
+    <!-- end column two -->
+    <div class="column"  style="background-color:rgb(236, 161, 161);">
+      <h2>Review a Workout!</h2>
+      <p hidden id = "idReview">Hidden</p>
+      <input type="text" id ="titleReview"   placeholder="Title">
+      <textarea type="text" id ="bodyReview"  placeholder="Describe your workout"></textarea>
+      <input type="text" id ="typeReview"  placeholder="Type of Exercise">
+      <input type="text" id ="weightReview"  placeholder="Amount of Weight">
+      <input type="text" id ="setsReview"  placeholder="Number of Sets">
+      <input type="text" id ="durationReview"  placeholder="Duration">
+      <input type="submit" id = "review">
+      
+    </div>
+    <!-- end column three -->
+
+    </div>
+    <!-- end of row One -->
+
+    <div class="row">
+
+      
       <a href="/exercises">See your workouts!</a>
       <a href="/user">See your profile!</a>
       <a href="/populateduser">See your profile and your Workouts!</a>
-    </form>
+
+    </div>
+    <!-- end of row two -->
+    
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
